@@ -39,11 +39,6 @@ const part2 = (data: string) => {
 
 type comareTo<T> = (newVal: T, oldVal: T) => boolean
 class SelectorArray<T> extends Array<T> {
-    /* 
-    unimplemented:
-        unshift
-        concat
-    */
     size: number
     comparator: comareTo<T>
 
@@ -52,16 +47,20 @@ class SelectorArray<T> extends Array<T> {
         this.size = size
         this.comparator = comparator
     }
-    push(item: T): number {
-        if (this.length < this.size) {
-            return super.push(item)
-        }
-        return -1
+
+    concat(other: SelectorArray<T>) {
+        const new_arr = new SelectorArray(this.size + other.size, this.comparator)
+        new_arr.fillFromArray([...this.items(), ...other.items()])
+        return new_arr
     }
-    insert(value: T) {
+
+    items() {
+        return this.slice(0)
+    }
+
+    push(value: T): number {
         let temp = value;
-        let i = 0
-        for(; i < this.length; i++) {
+        for(let i = 0; i < this.length; i++) {
             let thisItem = this[i]
             if(this.comparator(thisItem, value)) {
                 temp = thisItem
@@ -70,13 +69,17 @@ class SelectorArray<T> extends Array<T> {
             }
         }
         if(this.length < this.size) {
-            this.push(temp)
+            super.push(temp)
         }
+        return this.length
+    }
+    unshift(...arr: T[]) {
+        this.fillFromArray(arr)
+        return this.length
     }
     fillFromArray(array: T[]) {
         for (let total of array) {
-            this.insert(total)
-            console.log(this)
+            this.push(total)
         }
         return this
     }

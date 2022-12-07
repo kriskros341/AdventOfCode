@@ -1,0 +1,51 @@
+Hello everyone! I'm Kris 21 from Poland. The thing is that it's hard for me to focus my efforts in one domain and that I over complicate stuff. What I thought was a simple career question turned out to be much more complicated and has a lot to do with ego. Hear me out.
+
+--- summary ---
+I'm not sure whether to give it my all again because I'm not sure if I can do it well enough, with all of my effort in the past seemingly futile. All I know is that if I don't commit I surely won't give my best showing. And if I do it might hurt me socially and academically again.
+
+I'm tired of constantly pushing in couple directions at once, constantly jumping ships and making much less progress than if I focused on one area. Simultaneously choosing something closes so many potential pathways, the mere thought of it hurts. It feels like I'm chained from every direction and going in any results in friction from all other.
+--- summary ---
+
+Like 2 years ago in my final year of high school I took part in a competition to develop a website for affiliated company. The reward was unimpressive but I considered it as a shortcut to get into web-development. 
+
+What the company wanted us to do was to create a wordpress site with some styling from prepared bundles and a custom plugin PHP at most and it felt... I guess not enough? It's now hard now to explain why. I felt "better" than this and so I opted instead to create my own site from scratch with technologies I barely heard of. Not just the front that the user sees, but everything. What started as a learning opportunity quickly turned into a relentless grind. I genuinely thought that even with said handicap I can grind my way into victory, which would shortcut my way into an industry.
+
+Focusing on my own wants rather than set metrics I spent the next months of covid classes reading documentations, watching courses, designing, coding etc. Some weeks I surely spent over 8 hours a day on that. You could say I work hard, not smart.
+With final exams looming right after the deadline I finally got my priorities straight and managed to pass well enough.
+
+I lost the competition, got burnt out to the core and wrote some terrible React code. Guess I couldn't compete with world's most popular website creator and tens of kilobytes of styling copied from professional artists. Even though it might sound insane, but I still sometimes feel shame about it years later. As a last ditch of effort to keep the momentum going I tried applying to like 20 companies, which ended as well as you might expect. 
+
+Later the same month I decided with my friend that we would create a blog about rock music. I over complicated things again and the burnout caught up to me. Even thought he called working prototype far better than he expected, I felt like I couldn't make it good enough to compete with already deployed websites about music, so I told him I can't continue.
+
+That was the last time I thought of web development as a career option. Over last 2 years in uni I sparsely used this knowledge, but merely having that experience made me feel like if I wasn't making most the ambitious projects I was stagnating, like if I wasn't best I was stagnating. At the end of year one I ended up as main contributor two separate final projects. I started enjoying computer science, math, joined clubs etc. I think ego played a role in reorienting myself in more academic direction
+
+Month ago, after I was on a job fair where I made a bet with my friend that I'd apply to more jobs than he did. This silly game has granted me quite an interesting internship starting next week. The issue is that it's a React job. I'm terrified of the possibility that the same thing will happen. 
+
+I'm worried I won't be enough. I can still feel echoes of burnout. Yesterday I took part in a coding marathon to refresh my skills and let's just say I'm not proud of what my team accomplished in 24 hours, which in my mind means that I wasted these years.
+
+I'm not sure whether to give it my all again because I'm not sure if I can do it well enough, with all of my effort in the past seemingly futile. All I know is that if I don't commit I surely won't give my best showing. And if I do it might hurt me socially and academically again.
+
+I'm tired of constantly pushing in couple directions at once, constantly jumping ships and making much less progress than if I focused on one area. Simultaneously choosing something closes so many potential pathways, the mere thought of it hurts. It feels like I'm chained from every direction and going in any results in friction from all other.
+
+I feel a quite a bit of shame that I seem unable to solve these internal issues on my own. Seems like a recurring issue with me hah. After hours of tweaking I think it's good enough to post. What do you think? Do you have any suggestions on how I can explore this issue further?
+
+-- all the efforts in the past resulted in current events. Be proud.
+- this might not be best place to ask this kind of question
+- there's shame involved
+
+## 
+
+
+
+.
+M C
+P Z N D
+
+
+M C
+.
+P Z N D
+
+M
+C
+P Z N D
