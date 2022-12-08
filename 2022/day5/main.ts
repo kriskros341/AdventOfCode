@@ -2,23 +2,17 @@ import * as fs from 'fs'
 
 const matrixForm = (arr: any[][]) => {
     console.log("---------")
-    for(let i = 0; i < arr.length; i++) {
-        console.log(arr[i])
-    }
+    arr.forEach(row => console.log(row))
     console.log("---------")
 }
 
 const part1 = (startingPosition: string[][], instructionList: number[][]) => {
-    matrixForm(startingPosition)
     for (let [howMany, whereFrom, whereTo] of instructionList) {
         for (let i = 0; i < howMany; i++) {
-            console.log(startingPosition[whereFrom-1], whereFrom-1)
             if(startingPosition[whereFrom-1].length == 0)
                 continue
             startingPosition[whereTo-1].push(startingPosition[whereFrom-1].pop()!)
         }
-        console.log(howMany, whereFrom, whereTo)
-        matrixForm(startingPosition)
     }
     console.log(startingPosition.map(v => v[v.length-1]))
 }
@@ -28,14 +22,11 @@ const part2 = (startingPosition: string[][], instructionList: number[][]) => {
     for (let [howMany, whereFrom, whereTo] of instructionList) {
         let temp: string[] = []
         for (let i = 0; i < howMany; i++) {
-            console.log(startingPosition[whereFrom-1], whereFrom-1)
             if(startingPosition[whereFrom-1].length == 0)
                 continue
             temp.push(startingPosition[whereFrom-1].pop()!)
         }
         startingPosition[whereTo-1] = [...startingPosition[whereTo-1], ...temp.reverse()]
-        console.log(howMany, whereFrom, whereTo)
-        matrixForm(startingPosition)
     }
     console.log(startingPosition.map(v => v[v.length-1]))
 }
