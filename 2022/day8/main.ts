@@ -52,7 +52,6 @@ const countValue = <T>(matrix: T[][], value: T) => {
     let count = 0
     matrix.forEach(row => row.forEach(v => count += v == value ? 1 : 0))
     return count
-
 }
 
 const createVisibilityMatrix = (n: number) => {
@@ -61,6 +60,7 @@ const createVisibilityMatrix = (n: number) => {
     const edgesVisible = fillEdges(empty, filler)
     return edgesVisible
 }
+
 function madd_int(m1: number[][], m2: number[][]): number[][] {
     return m1.map((row, i) => row.map((_, j) => m1[i][j]+m2[i][j]))
 }
@@ -127,6 +127,7 @@ const part1 = (data: number[][]) => {
 }
 
 type Vec2 = [number, number]
+
 const add_vec2 = (v1: Vec2, v2: Vec2): Vec2 => {
     return v1.map((_, idx) => v1[idx] + v2[idx]) as Vec2
 }
@@ -184,14 +185,6 @@ const part2 = (forest: number[][]) => {
     const values = forest.map((row, i) => row.map((_, j) => getValueForTree([i, j])))
     console.log(getValueForTree([1,1]))
     console.log(getMaxValue(values))
-}
-const v = [1, 2, 3, 4, 5, 6, 7, 8]
-const part22 = () => {
-    return 1 * v.map(n => n*4).reduce((total, next) => total * next)
-}
-
-const printMatrix = <T>(matrix: T[][]) => {
-    matrix.forEach(v => console.log(v))
 }
 
 const main = () => {

@@ -39,9 +39,28 @@ const distantDiagonally = (Head: Vec2, Tail: Vec2): boolean => {
     return (dy > 1 && dx == 1) || (dy == 1 && dx > 1)
 }
 
+const DiscreteAvg = (v1: Vec2, v2: Vec2): Vec2 => {
+    let dx = v1[0] + v2[0]
+    let dy = v1[1] + v2[1]
+    dx = dx > 0 ? dx + 1 : dx - 1 
+    dy = dy > 0 ? dy + 1 : dy - 1 
+
+    return [Math.floor(dx / 2), Math.floor(dy / 2)]
+}
+const Distance = (v1: Vec2, v2: Vec2) => {
+    return Math.sqrt((v1[0]-v2[0])*(v1[0]-v2[0]) + (v1[1]-v2[1])*(v1[1]-v2[1]))
+}
+
 const part1 = (instructions: Instruction[]) => {
     let Head: Vec2 = [0, 0]
     let Tail: Vec2 = [0, 0]
+    let board = creatExampleBoard(6, 6)
+    const refreshBoard = () => {
+        board = creatExampleBoard(6, 6)
+        board[Head[0]][Head[1]] = 'H'
+        board[Tail[0]][Tail[1]] = 'T'
+        console.log(Head, Tail)
+    }
     const positionMemory = new Set<string>([])
     const recordPositin = (Knot: Vec2) => {
         const serialized = Knot[0].toString() + " " + Knot[1].toString()
@@ -50,23 +69,13 @@ const part1 = (instructions: Instruction[]) => {
     const handleHeadMovement = (side: Side) => {
         const direction = sideDirectionTranslation.get(side)!
         Head = add_vec2(Head, direction)
-        switch(true) {
-            case distantDiagonally(Head, Tail): {
-                Tail = add_vec2(Head, smul_vec2(direction, -1))
-                recordPositin(Tail)
-                break;
-            }
-            case distantVertically(Head, Tail): {
-                Tail = add_vec2(Tail, direction)
-                recordPositin(Tail)
-                break;
-            }
-            case distantHorizontally(Head, Tail): {
-                Tail = add_vec2(Tail, direction)
-                recordPositin(Tail)
-                break;
-            }
+        console.log(Distance(Head, Tail))
+        if(Distance(Head, Tail) > 1.5) {
+            Tail = DiscreteAvg(Head, Tail)
+            recordPositin(Tail)
         }
+        refreshBoard()
+        console.log(board.reverse())
     }
     recordPositin(Tail)
     for (let [side, distance] of instructions) {
@@ -169,7 +178,7 @@ const part2 = (instructions: Instruction[]) => {
 const main = () => {
     const data = fs.readFileSync("input.txt", "utf-8").split("\n")
     const instructions = data.map(line => line.split(' ')).map(pair => [pair[0], parseInt(pair[1])] as Instruction)
-    part2(instructions)
+    part1(instructions)
 }
 
 main()

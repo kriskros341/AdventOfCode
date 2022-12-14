@@ -43,8 +43,8 @@ const traverseUpToRoot = (graph: Directory) => {
         root = root.parent
     }
     return root
-
 }
+
 const fillInValues = (dir: Directory) => {
     for (let subDir of dir.subDirectories) {
         dir.value += fillInValues(subDir)
